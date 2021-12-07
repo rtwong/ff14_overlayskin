@@ -725,7 +725,7 @@ li:last-child
 .job-icon>.sam,
 .job-icon>.dnc,
 .job-icon>.rpr,
-.job-icon>.rpr,
+.job-icon>.sge,
 .job-icon>.gnb
 {
     -webkit-filter: hue-rotate(30deg);
