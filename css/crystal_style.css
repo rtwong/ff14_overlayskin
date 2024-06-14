@@ -288,7 +288,7 @@ ul
 .target-name 
 {
     cursor: pointer;
-    font-weight: 400;
+    font-weight: bold;
     margin-right: 12px;
     padding: 2px 4px;
     position: relative;
@@ -358,24 +358,7 @@ li:last-child
     content: ' ';
     right: -12px;
 }
-/*
-.character-job
 
-{
-    color:#F04040;
-}
-
-.character-job.학자, .character-job.점성술사, .character-job.환술사, .character-job.백마도사
-
-{
-    color:#00E000;
-}
-
-.character-job.검술사, .character-job.나이트, .character-job.도끼술사, .character-job.전사, .character-job.암흑기사
-
-{
-    color:#40A0F0;
-}*/
 .show-job-colors .bar
 {
     background-color: transparent !important;
@@ -388,6 +371,8 @@ li:last-child
 {
     border-color: transparent transparent transparent rgb(255, 255, 255);
 }
+
+/*Limit break*/
 .show-job-colors .리미트 .bar
 {
     background: linear-gradient(to right, rgb(255, 204, 0) 0%, transparent 50%, transparent 50%, rgb(255, 204, 0) 100%);
@@ -401,267 +386,598 @@ li:last-child
 {
     border-color: transparent transparent transparent rgb(255, 204, 0);
 }
-.show-job-colors .셀레네 .bar,
-.show-job-colors .에오스 .bar,
-.show-job-colors .학자 .bar 
+
+/* Tanks */
+
+:root
 {
-    background: linear-gradient(to right, rgb(60, 60, 170) 0%, transparent 50%, transparent 50%, rgb(60, 60, 170) 100%);
-    box-shadow: inset 0px 0px 7px rgb(60, 60, 170);
+    --tankcolour: rgb(112,165,249);
+    --tankcoloura: rgba(112,165,249,1);
 }
-.show-job-colors .학자 .bar::after 
+
+.show-job-colors .gla .bar,
+.show-job-colors .pld .bar 
 {
-    border-color: transparent rgb(60, 60, 170) transparent transparent;
+    background: linear-gradient(to right, var(--tankcolour) 0%, transparent 50%, transparent 50%, var(--tankcolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--tankcoloura);
 }
-.show-job-colors .학자 .bar::before 
+.show-job-colors .gla .bar::after,
+.show-job-colors .pld .bar::after 
 {
-    border-color: transparent transparent transparent rgb(60, 60, 170);
+    border-color: transparent var(--tankcolour) transparent transparent;
 }
-.show-job-colors .격투사 .bar,
-.show-job-colors .몽크 .bar 
+.show-job-colors .gla .bar::before,
+.show-job-colors .pld .bar::before 
 {
-    background: linear-gradient(to right, rgb(180, 140, 20) 0%, transparent 50%, transparent 50%, rgb(180, 140, 20) 100%);
-    box-shadow: inset 0px 0px 7px #b38915;
+    border-color: transparent transparent transparent var(--tankcolour);
 }
-.show-job-colors .격투가 .bar::after,
-.show-job-colors .몽크 .bar::after 
+
+.show-job-colors .mrd .bar,
+.show-job-colors .war .bar 
 {
-    border-color: transparent rgb(180, 140, 20) transparent transparent;
+    background: linear-gradient(to right, var(--tankcolour) 0%, transparent 50%, transparent 50%, var(--tankcolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--tankcoloura);
 }
-.show-job-colors .격투가 .bar::before,
-.show-job-colors .몽크 .bar::before 
+.show-job-colors .mrd .bar::after,
+.show-job-colors .war .bar::after 
 {
-    border-color: transparent transparent transparent rgb(180, 140, 20);
+    border-color: transparent var(--tankcolour) transparent transparent;
 }
-.show-job-colors .비술사 .bar,
-.show-job-colors .소환사 .bar,
-.show-job-colors .가루다 .bar,
-.show-job-colors .타이탄 .bar,
-.show-job-colors .이프리트 .bar,
-.show-job-colors .카벙클 .bar 
+.show-job-colors .mrd .bar::before,
+.show-job-colors .war .bar::before 
 {
-    background: linear-gradient(to right, rgb(40, 150, 0) 0%, transparent 50%, transparent 50%, rgb(40, 150, 0) 100%);
-    box-shadow: inset 0px 0px 7px rgb(40, 150, 0);
+    border-color: transparent transparent transparent var(--tankcolour);
 }
-.show-job-colors .비술사 .bar::after,
-.show-job-colors .소환사 .bar::after 
+
+.show-job-colors .drk .bar 
 {
-    border-color: transparent rgb(40, 150, 0) transparent transparent;
+    background: linear-gradient(to right, var(--tankcolour) 0%, transparent 50%, transparent 50%, var(--tankcolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--tankcoloura);
 }
-.show-job-colors .비술사 .bar::before,
-.show-job-colors .소환사 .bar::before 
+.show-job-colors .drk .bar::after 
 {
-    border-color: transparent transparent transparent rgb(40, 150, 0);
+    border-color: transparent var(--tankcolour) transparent transparent;
 }
-.show-job-colors .창술사 .bar,
-.show-job-colors .용기사 .bar 
+.show-job-colors .drk .bar::before 
 {
-    background: linear-gradient(to right, rgb(84, 96, 240) 0%, transparent 50%, transparent 50%, rgb(84, 96, 240) 100%);
-    box-shadow: inset 0px 0px 7px rgb(84, 96, 240);
+    border-color: transparent transparent transparent var(--tankcolour);
 }
-.show-job-colors .창술사 .bar::after,
-.show-job-colors .용기사 .bar::after 
+
+.show-job-colors .gnb .bar
 {
-    border-color: transparent rgb(84, 96, 240) transparent transparent;
+    background: linear-gradient(to right, var(--tankcolour) 0%, transparent 50%, transparent 50%, var(--tankcolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--tankcoloura);
 }
-.show-job-colors .창술사 .bar::before,
-.show-job-colors .용기사 .bar::before 
+.show-job-colors .gnb .bar::after
 {
-    border-color: transparent transparent transparent rgb(84, 96, 240);
+    border-color: transparent var(--tankcolour) transparent transparent;
 }
-.show-job-colors .환술사 .bar,
-.show-job-colors .백마도사 .bar 
+.show-job-colors .gnb .bar::before
 {
-    background: linear-gradient(to right, rgb(220, 210, 180) 0%, transparent 50%, transparent 50%, rgb(220, 210, 180) 100%);
-    box-shadow: inset 0px 0px 7px rgba(220, 215, 180, 1);
+    border-color: transparent transparent transparent var(--tankcolour);
 }
-.show-job-colors .환술사 .bar::after,
-.show-job-colors .백마도사 .bar::after 
+
+
+/* Healers */
+
+:root
 {
-    border-color: transparent rgb(220, 215, 180) transparent transparent;
+    --healercolour: rgb(105,225,145);
+    --healercoloura: rgba(105,225,145,1);
 }
-.show-job-colors .환술사 .bar::before,
-.show-job-colors .백마도사 .bar::before 
+
+.show-job-colors .cnj .bar,
+.show-job-colors .whm .bar 
 {
-    border-color: transparent transparent transparent rgb(220, 215, 180);
+    background: linear-gradient(to right, var(--healercolour) 0%, transparent 50%, transparent 50%, var(--healercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--healercoloura);
 }
-.show-job-colors .주술사 .bar,
-.show-job-colors .흑마도사 .bar 
+.show-job-colors .cnj .bar::after,
+.show-job-colors .whm .bar::after 
 {
-    background: linear-gradient(to right, rgb(100, 70, 150) 0%, transparent 50%, transparent 50%, rgb(100, 70, 150) 100%);
-    box-shadow: inset 0px 0px 7px rgba(100, 70, 150, 1);
+    border-color: transparent var(--healercolour) transparent transparent;
 }
-.show-job-colors .주술사 .bar::after,
-.show-job-colors .흑마도사 .bar::after 
+.show-job-colors .cnj .bar::before,
+.show-job-colors .whm .bar::before 
 {
-    border-color: transparent rgb(100, 70, 150) transparent transparent;
+    border-color: transparent transparent transparent var(--healercolour);
 }
-.show-job-colors .주술사 .bar::before,
-.show-job-colors .흑마도사 .bar::before 
+
+.show-job-colors .sch .bar 
 {
-    border-color: transparent transparent transparent rgb(100, 70, 150);
+    background: linear-gradient(to right, var(--healercolour) 0%, transparent 50%, transparent 50%, var(--healercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--healercoloura);
 }
-.show-job-colors .닌자 .bar,
-.show-job-colors .쌍검사 .bar 
+.show-job-colors .sch .bar::after 
 {
-    background: linear-gradient(to right, rgb(50, 50, 60) 0%, transparent 50%, transparent 50%, rgb(50, 50, 60) 100%);
-    box-shadow: inset 0px 0px 7px rgba(140, 50, 50, 1);
+    border-color: transparent var(--healercolour) transparent transparent;
 }
-.show-job-colors .쌍검사 .bar::after,
-.show-job-colors .닌자 .bar::after 
+.show-job-colors .sch .bar::before 
 {
-    border-color: transparent rgb(140, 50, 50) transparent transparent;
+    border-color: transparent transparent transparent var(--healercolour);
 }
-.show-job-colors .쌍검사 .bar::before,
-.show-job-colors .닌자 .bar::before 
+
+.show-job-colors .ast .bar 
 {
-    border-color: transparent transparent transparent rgb(140, 50, 50);
+    background: linear-gradient(to right, var(--healercolour) 0%, transparent 50%, transparent 50%, var(--healercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--healercoloura);
 }
-.show-job-colors .궁술사 .bar,
-.show-job-colors .음유시인 .bar 
+.show-job-colors .ast .bar::after 
+{
+    border-color: transparent var(--healercolour) transparent transparent;
+}
+.show-job-colors .ast .bar::before 
+{
+    border-color: transparent transparent transparent var(--healercolour);
+}
+
+.show-job-colors .sge .bar 
+{
+    background: linear-gradient(to right, var(--healercolour) 0%, transparent 50%, transparent 50%, var(--healercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--healercoloura);
+}
+.show-job-colors .sge .bar::after 
+{
+    border-color: transparent var(--healercolour) transparent transparent;
+}
+.show-job-colors .sge .bar::before 
+{
+    border-color: transparent transparent transparent var(--healercolour);
+}
+
+
+/* DPS */
+
+:root
+{
+    --dpscolour: rgb(226,104,104);
+    --dpscoloura: rgba(226,104,104,1);
+
+    /* Randy pink : rgb(229, 144, 187) */
+}
+
+
+.show-job-colors .pgl .bar,
+.show-job-colors .mnk .bar 
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .pgl .bar::after,
+.show-job-colors .mnk .bar::after 
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .pgl .bar::before,
+.show-job-colors .mnk .bar::before 
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+.show-job-colors .lnc .bar,
+.show-job-colors .drg .bar 
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .lnc .bar::after,
+.show-job-colors .drg .bar::after 
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .lnc .bar::before,
+.show-job-colors .drg .bar::before 
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+.show-job-colors .rog .bar, 
+.show-job-colors .nin .bar
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .rog .bar::after,
+.show-job-colors .nin .bar::after 
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .rog .bar::before,
+.show-job-colors .nin .bar::before 
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+.show-job-colors .sam .bar
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .sam .bar::after
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .sam .bar::before
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+.show-job-colors .rpr .bar
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .rpr .bar::after
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .rpr .bar::before
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+
+/* Ranged */
+
+.show-job-colors .arc .bar,
+.show-job-colors .brd .bar 
 {
     /*background: rgb(180, 200, 80);*/
-    background: linear-gradient(to right, rgb(180, 200, 80) 0%, transparent 50%, transparent 50%, rgb(180, 200, 80) 100%);
-    box-shadow: inset 0px 0px 7px rgba(180, 200, 80, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .궁술사 .bar::after,
-.show-job-colors .음유시인 .bar::after 
+.show-job-colors .arc .bar::after,
+.show-job-colors .brd .bar::after 
 {
-    border-color: transparent rgb(180, 200, 80) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .궁술사 .bar::before,
-.show-job-colors .음유시인 .bar::before 
+.show-job-colors .arc .bar::before,
+.show-job-colors .brd .bar::before 
 {
-    border-color: transparent transparent transparent rgb(180, 200, 80);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
-.show-job-colors .검술사 .bar,
-.show-job-colors .나이트 .bar 
+
+.show-job-colors .mch .bar
 {
-    background: linear-gradient(to right, rgb(210, 255, 255) 0%, transparent 50%, transparent 50%, rgb(210, 255, 255) 100%);
-    box-shadow: inset 0px 0px 7px rgba(210, 255, 255, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .검술사 .bar::after,
-.show-job-colors .나이트 .bar::after 
+.show-job-colors .mch .bar::after
 {
-    border-color: transparent rgb(210, 255, 255) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .검술사 .bar::before,
-.show-job-colors .나이트 .bar::before 
+.show-job-colors .mch .bar::before
 {
-    border-color: transparent transparent transparent rgb(210, 255, 255);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
-.show-job-colors .도끼술사 .bar,
-.show-job-colors .전사 .bar 
+
+.show-job-colors .dnc .bar
 {
-    background: linear-gradient(to right, rgb(170, 25, 25) 0%, transparent 50%, transparent 50%, rgb(170, 25, 25) 100%);
-    box-shadow: inset 0px 0px 7px rgba(170, 26, 22, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .도끼술사 .bar::after,
-.show-job-colors .전사 .bar::after 
+.show-job-colors .dnc .bar::after
 {
-    border-color: transparent rgb(170, 26, 22) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .도끼술사 .bar::before,
-.show-job-colors .전사 .bar::before 
+.show-job-colors .dnc .bar::before
 {
-    border-color: transparent transparent transparent rgb(170, 26, 22);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
-.show-job-colors .점성술사 .bar 
+
+
+/* Casters */
+
+
+.show-job-colors .thm .bar,
+.show-job-colors .blm .bar 
 {
-    background: linear-gradient(to right, rgb(250, 210, 100) 0%, transparent 50%, transparent 50%, rgb(250, 210, 100) 100%);
-    box-shadow: inset 0px 0px 7px rgba(250, 210, 100, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .점성술사 .bar::after 
+.show-job-colors .thm .bar::after,
+.show-job-colors .blm .bar::after 
 {
-    border-color: transparent rgb(250, 210, 100) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .점성술사 .bar::before 
+.show-job-colors .thm .bar::before,
+.show-job-colors .blm .bar::before 
 {
-    border-color: transparent transparent transparent rgb(250, 210, 100);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
-.show-job-colors .기공사 .bar,
-.show-job-colors .포탑 .bar 
+
+.show-job-colors .acn .bar,
+.show-job-colors .smn .bar
 {
-    background: linear-gradient(to right, rgb(130, 255, 240) 0%, transparent 50%, transparent 50%, rgb(130, 255, 240) 100%);
-    box-shadow: inset 0px 0px 7px rgba(130, 255, 240, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .기공사 .bar::after,
-.show-job-colors .포탑 .bar::after 
+.show-job-colors .acn .bar::after,
+.show-job-colors .smn .bar::after 
 {
-    border-color: transparent rgb(130, 255, 240) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .기공사 .bar::before,
-.show-job-colors .포탑 .bar::before 
+.show-job-colors .acn .bar::before,
+.show-job-colors .smn .bar::before 
 {
-    border-color: transparent transparent transparent rgb(130, 255, 240);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
-.show-job-colors .암흑기사 .bar 
+
+
+.show-job-colors .rdm .bar
 {
-    background: linear-gradient(to right, rgb(150, 50, 50) 0%, transparent 50%, transparent 50%, rgb(150, 50, 50) 100%);
-    box-shadow: inset 0px 0px 7px rgba(150, 50, 50, 1);
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .암흑기사 .bar::after 
+.show-job-colors .rdm .bar::after
 {
-    border-color: transparent rgb(150, 50, 50) transparent transparent;
+    border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .암흑기사 .bar::before 
+.show-job-colors .rdm .bar::before
 {
-    border-color: transparent transparent transparent rgb(150, 50, 50);
+    border-color: transparent transparent transparent var(--dpscolour);
 }
+
+
+.show-job-colors .dnc .bar
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .dnc .bar::after
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .dnc .bar::before
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
+
+
+/* crafter gatherers */
+
+:root
+{
+    --gatherercolour: rgb(156,124,73);
+    --gatherercoloura: rgba(156,124,73,1);
+}
+
+
+.show-job-colors .btn .bar
+{
+    background: linear-gradient(to right, var(--gatherercolour) 0%, transparent 50%, transparent 50%, var(--gatherercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--gatherercoloura);
+}
+.show-job-colors .btn .bar::after
+{
+    border-color: transparent var(--gatherercolour) transparent transparent;
+}
+.show-job-colors .btn .bar::before
+{
+    border-color: transparent transparent transparent var(--gatherercolour);
+}
+
+.show-job-colors .min .bar
+{
+    background: linear-gradient(to right, var(--gatherercolour) 0%, transparent 50%, transparent 50%, var(--gatherercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--gatherercoloura);
+}
+.show-job-colors .min .bar::after
+{
+    border-color: transparent var(--gatherercolour) transparent transparent;
+}
+.show-job-colors .min .bar::before
+{
+    border-color: transparent transparent transparent var(--gatherercolour);
+}
+
+.show-job-colors .fsh .bar
+{
+    background: linear-gradient(to right, var(--gatherercolour) 0%, transparent 50%, transparent 50%, var(--gatherercolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--gatherercoloura);
+}
+.show-job-colors .fsh .bar::after
+{
+    border-color: transparent var(--gatherercolour) transparent transparent;
+}
+.show-job-colors .fsh .bar::before
+{
+    border-color: transparent transparent transparent var(--gatherercolour);
+}
+
+:root{
+    --craftercolor: rgb(181,181,181);
+    --craftercolora: rgb(181,181,181,1);
+}
+
+.show-job-colors .crp .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .crp .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .crp .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .crp .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .crp .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .crp .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .bsm .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .bsm .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .bsm .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .arm .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .arm .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .arm .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .gsm .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .gsm .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .gsm .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .ltw .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .ltw .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .ltw .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .wvr .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .wvr .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .wvr .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .alc .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .alc .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .alc .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
+.show-job-colors .cul .bar
+{
+    background: linear-gradient(to right, var(--craftercolor) 0%, transparent 50%, transparent 50%, var(--craftercolor) 100%);
+    box-shadow: inset 0px 0px 7px var(--craftercolora);
+}
+.show-job-colors .cul .bar::after
+{
+    border-color: transparent var(--craftercolor) transparent transparent;
+}
+.show-job-colors .cul .bar::before
+{
+    border-color: transparent transparent transparent var(--craftercolor);
+}
+
 /* JOB ONLY (no class) */
 .job-icon *
 {
     opacity: .5;
 }
-.job-icon>.학자 
+.job-icon>.sch 
 {
     -webkit-filter: hue-rotate(190deg);
 }
-.job-icon>.몽크 
+.job-icon>.mnk 
 {
     -webkit-filter: hue-rotate(5deg);
 }
-.job-icon>.소환사 
+.job-icon>.smn 
 {
     -webkit-filter: hue-rotate(70deg);
 }
-.job-icon>.용기사 
+.job-icon>.drg 
 {
     -webkit-filter: hue-rotate(180deg);
 }
-.job-icon>.백마도사 
+.job-icon>.whm 
 {
     -webkit-filter: brightness(2);
 }
-.job-icon>.흑마도사 
+.job-icon>.blm 
 {
     -webkit-filter: hue-rotate(200deg);
 }
-.job-icon>.닌자 
+.job-icon>.nin 
 {
     -webkit-filter: hue-rotate(285deg);
 }
-.job-icon>.음유시인 
+.job-icon>.brd
+.job-icon>.rdm,
+.job-icon>.sam,
+.job-icon>.dnc,
+.job-icon>.rpr,
+.job-icon>.sge,
+.job-icon>.gnb  
 {
     -webkit-filter: hue-rotate(30deg);
 }
-.job-icon>.나이트 
+.job-icon>.pld 
 {
     -webkit-filter: hue-rotate(145deg);
 }
-.job-icon>.전사 
+.job-icon>.war 
 {
     -webkit-filter: hue-rotate(285deg);
 }
-.job-icon>.점성술사 
+.job-icon>.ast 
 {
     -webkit-filter: hue-rotate(345deg);
 }
-.job-icon>.기공사,
+.job-icon>.mch,
 .job-icon>.포탑 
 {
     -webkit-filter: hue-rotate(135deg);
 }
-.job-icon>.암흑기사 
+.job-icon>.drk 
 {
     -webkit-filter: hue-rotate(350deg);
 }
@@ -699,6 +1015,7 @@ li:last-child
 }
 .row .stats 
 {
+    font-weight: bold;
     float: right;
     margin-left: 4px;
     white-space: nowrap;
