@@ -616,6 +616,20 @@ li:last-child
     border-color: transparent transparent transparent var(--dpscolour);
 }
 
+.show-job-colors .vpr .bar
+{
+    background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
+    box-shadow: inset 0px 0px 7px var(--dpscoloura);
+}
+.show-job-colors .vpr .bar::after
+{
+    border-color: transparent var(--dpscolour) transparent transparent;
+}
+.show-job-colors .vpr .bar::before
+{
+    border-color: transparent transparent transparent var(--dpscolour);
+}
+
 
 /* Ranged */
 
@@ -719,16 +733,16 @@ li:last-child
 }
 
 
-.show-job-colors .dnc .bar
+.show-job-colors .pct .bar
 {
     background: linear-gradient(to right, var(--dpscolour) 0%, transparent 50%, transparent 50%, var(--dpscolour) 100%);
     box-shadow: inset 0px 0px 7px var(--dpscoloura);
 }
-.show-job-colors .dnc .bar::after
+.show-job-colors .pct .bar::after
 {
     border-color: transparent var(--dpscolour) transparent transparent;
 }
-.show-job-colors .dnc .bar::before
+.show-job-colors .pct .bar::before
 {
     border-color: transparent transparent transparent var(--dpscolour);
 }
