@@ -316,7 +316,7 @@ var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____C
             
             else if (combatant.Job =="Limit Break")
             {   
-                combatant.Job = "리미트";
+                combatant.Job = "limit";
                 combatant.JobN = ""; //languagepack.Limitbreak[language_kr];
             }
 

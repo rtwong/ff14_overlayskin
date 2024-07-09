@@ -373,16 +373,16 @@ li:last-child
 }
 
 /*Limit break*/
-.show-job-colors .리미트 .bar
+.show-job-colors .limit .bar
 {
     background: linear-gradient(to right, rgb(255, 204, 0) 0%, transparent 50%, transparent 50%, rgb(255, 204, 0) 100%);
     box-shadow: inset 0px 0px 7px rgb(255, 204, 0);
 }
-.show-job-colors .리미트 .bar::after 
+.show-job-colors .limit .bar::after 
 {
     border-color: transparent rgb(255, 204, 0) transparent transparent;
 }
-.show-job-colors .리미트 .bar::before 
+.show-job-colors .limit .bar::before 
 {
     border-color: transparent transparent transparent rgb(255, 204, 0);
 }
